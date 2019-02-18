@@ -7,22 +7,22 @@ $(document).ready(function() {
     for (var x = 25; x < 400; x += 50){
         for (var y = 25; y < 400; y += 50){
             c = Shape.Circle(x, y, 20);
-            c.fillcolor = 'green';
+            c.fillColor = 'green';
         }
     }
     var tool = new Tool();
     var c = Shape.Circle(200,200,80);
-    c.fillcolor = 'black';
+    c.fillColor = 'black';
     var text = new PointText(200, 200);
     text.justification = 'center';
-    text.fillcolor = 'white';
+    text.fillColor = 'white';
     text.fontSize = 20;
     text.content = 'Hello, World!!';
 
     tool.onMouseDown = function(event)
     {
         var c = Shape.Circle( event.point, 20);
-        c.fillcolor = 'green';
+        c.fillColor = 'green';
     };
     paper.view.draw();
     console.log('jquery - main.js loaded');
